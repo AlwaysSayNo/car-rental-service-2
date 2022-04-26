@@ -1,0 +1,248 @@
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+Index: src/main/resources/locale_en.properties
+===================================================================
+diff --git a/src/main/resources/locale_en.properties b/src/main/resources/locale_en.properties
+deleted file mode 100644
+--- a/src/main/resources/locale_en.properties	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,25 +0,0 @@
+-#HEADER
+-information.language=en
+-information.screen.header=Car Rental Service
+-
+-#SIGNUP
+-sign.up.title=Sign up for Car Rental Service
+-sign.up.first.name=First name
+-sign.up.last.name=Last name
+-sign.up.phone.number=Last name
+-sign.up.email=Email address
+-sign.up.password=Password
+-sign.up.password.confirm=Confirm password
+-sign.up.submit=Sign up
+-
+-#SIGNIN
+-sign.in.title=Sign in for Car Rental Service
+-sign.in.email=Email address
+-sign.in.password=Password
+-sign.in.submit=Sign in
+-sign.in.message.new.to.crs=New to Car Rental Service
+-sign.in.message.create.account=Create an account
+-
+-
+-regex.first.name=([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*
+-regex.last.name=([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+deleted file mode 100644
+--- a/.idea/jarRepositories.xml	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Central Repository" />
+-      <option name="url" value="https://repo.maven.apache.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/main/java/com/nazar/grinko/epam/configs/ApplicationConfig.java
+===================================================================
+diff --git a/src/main/java/com/nazar/grinko/epam/configs/ApplicationConfig.java b/src/main/java/com/nazar/grinko/epam/configs/ApplicationConfig.java
+deleted file mode 100644
+--- a/src/main/java/com/nazar/grinko/epam/configs/ApplicationConfig.java	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,21 +0,0 @@
+-package com.nazar.grinko.epam.configs;
+-
+-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+-
+-public class ApplicationConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
+-
+-    @Override
+-    protected Class<?>[] getRootConfigClasses() {
+-        return new Class<?>[]{};
+-    }
+-
+-    @Override
+-    protected Class<?>[] getServletConfigClasses() {
+-        return new Class[]{WebConfig.class};
+-    }
+-
+-    @Override
+-    protected String[] getServletMappings() {
+-        return new String[]{"/"};
+-    }
+-}
+Index: .idea/encodings.xml
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+deleted file mode 100644
+--- a/.idea/encodings.xml	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,7 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+deleted file mode 100644
+--- a/.idea/runConfigurations.xml	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,10 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/jpa-buddy.xml
+===================================================================
+diff --git a/.idea/jpa-buddy.xml b/.idea/jpa-buddy.xml
+deleted file mode 100644
+--- a/.idea/jpa-buddy.xml	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="JpaBuddyIdeaProjectConfig">
+-    <option name="defaultUnitInitialized" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/main/java/com/nazar/grinko/epam/configs/WebConfig.java
+===================================================================
+diff --git a/src/main/java/com/nazar/grinko/epam/configs/WebConfig.java b/src/main/java/com/nazar/grinko/epam/configs/WebConfig.java
+deleted file mode 100644
+--- a/src/main/java/com/nazar/grinko/epam/configs/WebConfig.java	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,60 +0,0 @@
+-package com.nazar.grinko.epam.configs;
+-
+-import org.springframework.context.ApplicationContext;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
+-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+-import org.thymeleaf.spring5.SpringTemplateEngine;
+-import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+-import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+-
+-@Configuration
+-@EnableWebMvc
+-public class WebConfig implements WebMvcConfigurer {
+-
+-    private final ApplicationContext applicationContext;
+-
+-    public WebConfig(ApplicationContext applicationContext) {
+-        this.applicationContext = applicationContext;
+-    }
+-
+-    // configures access to static resources (like css, js, images, ...)
+-    @Override
+-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+-        registry.addResourceHandler("/css/**").addResourceLocations("/statics/css/");
+-        registry.addResourceHandler("/js/**").addResourceLocations("/statics/js/");
+-        registry.addResourceHandler("/image/**").addResourceLocations("/statics/image/");
+-    }
+-
+-    // configures access to non-static resources (like path`s prefix, suffix, encoding, ...)
+-    @Bean
+-    public SpringResourceTemplateResolver templateResolver() {
+-        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+-        templateResolver.setApplicationContext(applicationContext);
+-        templateResolver.setCharacterEncoding("UTF-8");
+-        templateResolver.setPrefix("/WEB-INF/views/");
+-        templateResolver.setSuffix(".html");
+-        return templateResolver;
+-    }
+-
+-    @Bean
+-    public SpringTemplateEngine templateEngine() {
+-        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+-        templateEngine.setTemplateResolver(templateResolver());
+-        // templateEngine.setMessageSource();
+-        templateEngine.setEnableSpringELCompiler(true);
+-        return templateEngine;
+-    }
+-
+-    @Override
+-    public void configureViewResolvers(ViewResolverRegistry registry) {
+-        ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+-        resolver.setTemplateEngine(templateEngine());
+-        registry.viewResolver(resolver);
+-    }
+-
+-    // To configure locale Notepad.WebConfig(messageSource, addInterceptors, localeResolver)
+-}
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
++++ /dev/null	(revision ec9cd82f021400e4fddae7688b60de77f84916a2)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="FrameworkDetectionExcludesConfiguration">
+-    <file type="web" url="file://$PROJECT_DIR$" />
+-  </component>
+-  <component name="MavenProjectsManager">
+-    <option name="originalFiles">
+-      <list>
+-        <option value="$PROJECT_DIR$/pom.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-  <component name="ProjectType">
+-    <option name="id" value="jpab" />
+-  </component>
+-</project>
+\ No newline at end of file
+diff --git a/src/main/resources/locale_uk.properties b/src/main/resources/locale_uk.properties
+deleted file mode 100644

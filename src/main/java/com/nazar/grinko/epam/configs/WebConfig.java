@@ -1,7 +1,9 @@
 package com.nazar.grinko.epam.configs;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -12,21 +14,23 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
+@ComponentScan("com.nazar.grinko.epam")
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
 
+    @Autowired
     public WebConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 
-    // configures access to static resources (like css, js, images, ...)
+    // configures access to static resources (like css, js-scripts, images, ...)
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/css/**").addResourceLocations("/statics/css/");
-        registry.addResourceHandler("/js/**").addResourceLocations("/statics/js/");
-        registry.addResourceHandler("/image/**").addResourceLocations("/statics/image/");
+        registry.addResourceHandler("/images/**").addResourceLocations("/statics/images/**");
+        registry.addResourceHandler("/css/**").addResourceLocations("/statics/css/**");
+        registry.addResourceHandler("/js/**").addResourceLocations("/statics/js/**");
     }
 
     // configures access to non-static resources (like path`s prefix, suffix, encoding, ...)
@@ -34,7 +38,6 @@ public class WebConfig implements WebMvcConfigurer {
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setPrefix("/WEB-INF/views/");
         templateResolver.setSuffix(".html");
         return templateResolver;
@@ -44,7 +47,7 @@ public class WebConfig implements WebMvcConfigurer {
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
-        // templateEngine.setMessageSource();
+        //templateEngine.setMessageSource()
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
@@ -56,5 +59,6 @@ public class WebConfig implements WebMvcConfigurer {
         registry.viewResolver(resolver);
     }
 
-    // To configure locale Notepad.WebConfig(messageSource, addInterceptors, localeResolver)
+    // Configure locale Notepad.WebConfig(messageSource, addInterceptors, localeResolver)
+
 }
